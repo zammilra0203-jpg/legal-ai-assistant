@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Legal AI Assistant — Gemini</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:14px">
+    <div>
+      <h1>⚖ Legal AI Assistant</h1>
+      <div class="tag">Dibuat oleh Muzammil, S.H., M.H.</div>
+    </div>
+    <div class="firm-brand" id="firmBrand"></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <span class="tag" style="text-align:right;max-width:200px">MVP — bukan pengganti verifikasi sumber resmi</span>
+    <span class="tag" id="capStatus">Memeriksa akses AI…</span>
+    <button class="iconbtn" id="btnGemini">⚙ Gemini API</button>
+    <button class="iconbtn" id="btnFirm">⚙ Identitas Kantor</button>
+  </div>
+</header>
+<div id="modalRoot"></div>
+<div id="geminiModalRoot"></div>
+<div class="layout">
+  <div class="col">
+    <h2>Perkara</h2>
+    <button id="btnNew" style="width:100%;margin-bottom:10px">+ Perkara Baru</button>
+    <div id="caseList"></div>
+    <div style="margin-top:14px;padding-top:10px;border-top:1px solid var(--line)">
+      <div class="muted" style="margin-bottom:6px">Data tersimpan di browser ini saja. Cadangkan secara berkala:</div>
+      <button class="ghost" id="btnExport" style="width:100%;margin-bottom:6px" ${'' /*downloads*/}>Ekspor Cadangan (.json)</button>
+      <label class="ghost" style="display:block;text-align:center;border:1px solid var(--accent);border-radius:6px;padding:7px;cursor:pointer;font-size:13px;color:var(--accent)">
+        Impor Cadangan<input type="file" id="btnImport" accept=".json" style="display:none">
+      </label>
+    </div>
+  </div>
+  <div class="col" id="middleCol"></div>
+  <div class="col" id="docCol"></div>
+</div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
